@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.amal.tp1soa</groupId>
+    <artifactId>tp1soa</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>TP1SOA - Cinéma</name>
+    <description>Projet XML/XSD/XPath/XSL sur le domaine du cinéma</description>
+
+    <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- Pour exécuter des expressions XPath -->
+        <dependency>
+            <groupId>javax.xml.parsers</groupId>
+            <artifactId>jaxp-api</artifactId>
+            <version>1.4.5</version>
+        </dependency>
+    </dependencies>
+     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.6.2</version>
+                <configuration>
+                    <mainClass>tp.tp.Tp.tp1soa.App</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

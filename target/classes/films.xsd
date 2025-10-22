@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="cinema">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="films">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="film" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="titre" type="xs:string"/>
+                                        <xs:element name="annee" type="xs:gYear"/>
+                                        <xs:element name="genre" type="xs:string"/>
+                                        <xs:element name="realisateur">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="acteurs">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="acteur" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute name="id" type="xs:ID" use="required"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

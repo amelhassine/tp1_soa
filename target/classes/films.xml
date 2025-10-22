@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cinema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="films.xsd">
+    <films>
+        <film id="f1">
+            <titre>Inception</titre>
+            <annee>2010</annee>
+            <genre>Science-Fiction</genre>
+            <realisateur id="cn1">Christopher Nolan</realisateur>
+            <acteurs>
+                <acteur id="a1">Leonardo DiCaprio</acteur>
+                <acteur id="a2">Joseph Gordon-Levitt</acteur>
+            </acteurs>
+        </film>
+
+        <film id="f2">
+            <titre>Interstellar</titre>
+            <annee>2014</annee>
+            <genre>Science-Fiction</genre>
+            <realisateur id="ms1">Martin Scorsese</realisateur>
+            <acteurs>
+                <acteur id="a3">Matthew McConaughey</acteur>
+                <acteur id="a4">Anne Hathaway</acteur>
+            </acteurs>
+        </film>
+    </films>
+</cinema>
